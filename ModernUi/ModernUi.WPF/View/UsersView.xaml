@@ -1,0 +1,60 @@
+﻿<UserControl
+    x:Class="ModernUi.WPF.View.UsersView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:common="clr-namespace:ModernUi.WPF.Common"
+    xmlns:components="clr-namespace:ModernUi.WPF.Components"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ModernUi.WPF.View"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Name="Users"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <common:BackPageLayout BackCommand="{Binding BackCommand}">
+
+        <common:BackPageLayout.NavBarItems>
+            <Button
+                Margin="10"
+                Padding="10"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                Command="{Binding NavigateToCreateUsers}"
+                Content="Create user"
+                Style="{StaticResource PButton}" />
+        </common:BackPageLayout.NavBarItems>
+
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <TextBlock
+                Grid.Row="0"
+                Foreground="{StaticResource SecondaryTextColor}"
+                Style="{StaticResource Header}"
+                Text="Users" />
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Hidden">
+
+                <ItemsControl ItemsSource="{Binding Users}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <components:UserView
+                                Margin="2"
+                                NavigateToDelete="{Binding DataContext.NavigateToDeleteUser, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                NavigateToEdit="{Binding DataContext.NavigateToEdit, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+
+            </ScrollViewer>
+        </Grid>
+    </common:BackPageLayout>
+</UserControl>

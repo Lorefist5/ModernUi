@@ -1,0 +1,63 @@
+﻿<Window
+    x:Class="ModernUi.WPF.Alert.PopUp"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:ModernUi.WPF.Alert"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="{Binding Title}"
+    Width="420"
+    Height="300"
+    MinWidth="420"
+    MinHeight="300"
+    MaxWidth="420"
+    MaxHeight="300"
+    Padding="10"
+    Background="{StaticResource PopUpPrimaryBackground}"
+    WindowStartupLocation="CenterOwner"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <WindowChrome.WindowChrome>
+        <WindowChrome
+            CaptionHeight="0"
+            CornerRadius="25"
+            GlassFrameThickness="0" />
+    </WindowChrome.WindowChrome>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.70*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Border
+            Margin="10,0,10,10"
+            BorderBrush="{StaticResource PrimaryHover}"
+            BorderThickness="0,0,0,1">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock
+                    Margin="10"
+                    VerticalAlignment="Center"
+                    FontSize="45"
+                    FontWeight="Bold"
+                    Text="{Binding Title}" />
+
+                <TextBlock
+                    Margin="10"
+                    FontSize="25"
+                    FontWeight="Light"
+                    Text="{Binding Message}"
+                    TextWrapping="Wrap" />
+
+            </StackPanel>
+        </Border>
+
+
+        <Button
+            Grid.Row="1"
+            Margin="10"
+            Padding="10"
+            VerticalAlignment="Top"
+            Click="OkayButton_Click"
+            Content="Okay" />
+
+    </Grid>
+</Window>

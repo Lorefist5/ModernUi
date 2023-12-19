@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernUi.WPF", "ModernUi.WPF\ModernUi.WPF.csproj", "{5F3448C0-4CC9-45F6-B488-C84A09C8E1D1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModernUi.Data", "ModernUi.Data\ModernUi.Data.csproj", "{19481CB0-1854-481B-9529-89FAEA0D3C88}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5F3448C0-4CC9-45F6-B488-C84A09C8E1D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F3448C0-4CC9-45F6-B488-C84A09C8E1D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F3448C0-4CC9-45F6-B488-C84A09C8E1D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F3448C0-4CC9-45F6-B488-C84A09C8E1D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19481CB0-1854-481B-9529-89FAEA0D3C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19481CB0-1854-481B-9529-89FAEA0D3C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19481CB0-1854-481B-9529-89FAEA0D3C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19481CB0-1854-481B-9529-89FAEA0D3C88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F3980DBE-993C-4136-B696-163A92A96A9E}
+	EndGlobalSection
+EndGlobal

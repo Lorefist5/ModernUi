@@ -1,0 +1,43 @@
+﻿<Application
+    x:Class="ModernUi.WPF.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:ModernUi.WPF"
+    xmlns:view="clr-namespace:ModernUi.WPF.View"
+    xmlns:viewModel="clr-namespace:ModernUi.WPF.ViewModel">
+    <Application.Resources>
+
+
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Theme/AppColors.xaml" />
+                <ResourceDictionary Source="Theme/Buttons.xaml" />
+                <ResourceDictionary Source="Theme/Inputs.xaml" />
+                <ResourceDictionary Source="Theme/Texts.xaml" />
+                <ResourceDictionary Source="Common/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type TypeName=viewModel:HomeViewModel}">
+                <view:HomeView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type TypeName=viewModel:UsersViewModel}">
+                <view:UsersView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type TypeName=viewModel:CreateUserViewModel}">
+                <view:CreateUserView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type TypeName=viewModel:DeleteUserViewModel}">
+                <view:DeleteUserView />
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type TypeName=viewModel:EditUserViewModel}">
+                <view:EditUserView />
+            </DataTemplate>
+
+        </ResourceDictionary>
+
+
+
+
+    </Application.Resources>
+</Application>

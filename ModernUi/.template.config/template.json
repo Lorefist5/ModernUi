@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Lorefist",
+  "classifications": [ "WPF", "MVVM"],
+  "identity": "ModernUi",
+  "name": "Wpf with Dependency injection and modern looking user interface",
+  "description": "Simplifies Dependency injection and MVVM",
+  "shortName": "ModernUi",
+  "sourceName": "ModernUi",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  }
+}
